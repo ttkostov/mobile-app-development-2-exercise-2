@@ -2,8 +2,6 @@ import {View, StyleSheet} from 'react-native';
 import Header from '../components/Header.js';
 import WeatherPanel from '../components/WeatherPanel'
 import CustomFAB from '../components/CustomFAB';
-import {FAB} from 'react-native-paper';
-import {AppTheme as theme} from "../theme/AppTheme";
 
 export default function WeatherScreen() {
 
