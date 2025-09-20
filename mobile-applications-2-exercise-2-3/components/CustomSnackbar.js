@@ -1,5 +1,4 @@
-import {Snackbar, useTheme} from 'react-native-paper';
-import {StyleSheet} from "react-native";
+import {Snackbar} from 'react-native-paper';
 
 export default function CustomSnackbar({visible, onDismiss}) {
 
