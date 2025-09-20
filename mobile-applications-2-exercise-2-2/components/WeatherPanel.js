@@ -23,10 +23,10 @@ export default function WeatherPanel() {
 
     return (
         <View style={styles.panelContainer}>
-            <CityInput value={city} onChangeText={setCity} onClear={clearInput}/>
             {
                 loading ? <ActivityIndicator size="large" color='white'/> :
                     <>
+                        <CityInput value={city} onChangeText={setCity} onClear={clearInput}/>
                         <WeatherDetails/>
                         <PrimaryButton
                             text='Simulate loading'
