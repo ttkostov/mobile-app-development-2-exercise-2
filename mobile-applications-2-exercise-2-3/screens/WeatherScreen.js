@@ -5,25 +5,28 @@ import CustomFAB from '../components/CustomFAB';
 import {Platform} from "react-native";
 import AboutDialog from "../components/AboutDialog";
 import {useState} from "react";
+import CustomSnackbar from "../components/CustomSnackbar";
 
 export default function WeatherScreen({toggleTheme}) {
     const [aboutDialogVisible, setAboutDialogVisible] = useState(false);
+    const [snackBarVisible, setSnackBarVisible] = useState(false);
 
     const showDialog = () => setAboutDialogVisible(true);
-
     const hideDialog = () => setAboutDialogVisible(false);
+
+    const onToggleSnackbar = () => setSnackBarVisible(true);
+    const onDismissSnackbar = () => setSnackBarVisible(false);
 
     return (
         <KeyboardAvoidingView style={styles.screen} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-                <Header toggleTheme={toggleTheme} showAboutDialog={showDialog} />
-                <View style={styles.weatherContainer}>
-                    <WeatherPanel/>
-                </View>
-                <AboutDialog onDismiss={hideDialog} visible={aboutDialogVisible}/>
-                <CustomFAB/>
+            <Header toggleTheme={toggleTheme} showAboutDialog={showDialog}/>
+            <View style={styles.weatherContainer}>
+                <WeatherPanel/>
+            </View>
+            <AboutDialog onDismiss={hideDialog} visible={aboutDialogVisible}/>
+            <CustomFAB onPress={onToggleSnackbar}/>
+            <CustomSnackbar visible={snackBarVisible} onDismiss={onDismissSnackbar}/>
         </KeyboardAvoidingView>
-
-
     )
 
 }
