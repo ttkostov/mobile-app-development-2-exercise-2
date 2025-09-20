@@ -3,16 +3,9 @@ import CityInput from "./CityInput";
 import {useState} from "react";
 
 export default function Header() {
-  const [city, setCity] = useState('');
-
-  const clearInput = () => {
-    setCity('');   // clears from Heather too
-  };
-
   return (
     <View style={styles.heatherContainer}>
       <Text style={styles.text}>Weather Now</Text>
-      <CityInput value={city} onChangeText={setCity} onClear={clearInput}/>
     </View>
   )
 }

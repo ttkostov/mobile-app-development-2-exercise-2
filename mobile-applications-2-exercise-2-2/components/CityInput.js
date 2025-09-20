@@ -28,10 +28,9 @@ const styles = StyleSheet.create({
         gap: 20
     },
     textInput: {
+        borderRadius: 20,
         borderWidth: 1,
         width: 250,
         padding: 10,
-    },
-    button: {
     }
 })

@@ -18,7 +18,6 @@ export default function WeatherDetails() {
 
 const styles = StyleSheet.create({
     weatherContainer: {
-        backgroundColor: 'rgba(255,255,255,0.8)',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
