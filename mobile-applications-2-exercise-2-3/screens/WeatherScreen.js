@@ -1,12 +1,12 @@
 import {View, StyleSheet} from 'react-native';
-import Heather from '../components/Heather.js';
+import Header from '../components/Header.js';
 import WeatherPanel from '../components/WeatherPanel'
 import {FAB} from 'react-native-paper';
 
 export default function WeatherScreen() {
     return (
         <View style={styles.screen}>
-            <Heather/>
+            <Header/>
             <View style={styles.weatherContainer}>
                 <WeatherPanel/>
             </View>
