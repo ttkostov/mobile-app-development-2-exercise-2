@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 import {Appbar} from 'react-native-paper';
 
 
-export default function Header({toggleTheme}) {
+export default function Header({toggleTheme, showAboutDialog}) {
     return (
         <Appbar.Header
             style={styles.heatherContainer}
@@ -10,7 +10,7 @@ export default function Header({toggleTheme}) {
             >
             <Appbar.Content title='Weather Now'/>
             <Appbar.Action icon='theme-light-dark' onPress={toggleTheme}/>
-            <Appbar.Action icon='information'/>
+            <Appbar.Action icon='information' onPress={showAboutDialog}/>
         </Appbar.Header>
 
     )
