@@ -1,15 +1,16 @@
 import {Platform, StatusBar, StyleSheet, View} from 'react-native';
 import WeatherScreen from './screens/WeatherScreen';
 import {SafeAreaProvider, SafeAreaView} from "react-native-safe-area-context";
+import {Provider as PaperProvider, MD3LightTheme} from 'react-native-paper';
 
 export default function App() {
     return (
-        <SafeAreaProvider>
-            <StatusBar barStyle='light-content'/>
+        <PaperProvider theme={MD3LightTheme}>
             <SafeAreaView style={styles.container}>
+                <StatusBar barStyle='light-content' backgroundColor={MD3LightTheme.colors.background}/>
                 <WeatherScreen/>
             </SafeAreaView>
-        </SafeAreaProvider>
+        </PaperProvider>
     );
 }
 
@@ -23,6 +24,7 @@ const styles = StyleSheet.create({
                 backgroundColor: 'darkslategray',
             },
             android: {
+               // backgroundColor: MD3LightTheme.colors.background, // TODO
                 backgroundColor: 'darkseagreen',
             },
             web: {

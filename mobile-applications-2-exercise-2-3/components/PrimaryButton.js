@@ -1,22 +1,24 @@
-import {Button, View, StyleSheet, Platform} from "react-native";
+import {View, StyleSheet, Platform} from "react-native";
+import {Button} from 'react-native-paper';
 
 export default function PrimaryButton({text, onPress, disabled}) {
     return (
         <View style={styles.button}>
             <Button
-                title={text}
+                mode="contained"
                 onPress={onPress}
                 disabled={disabled}
-                color={Platform.select({
+                icon='refresh'
+                buttonColor={Platform.select({
                     ios: 'black',
                     android: 'darkslategray',
                     web: 'darkred',
                     default: 'darkblue',
                 })}
-            />
+            >{text}</Button>
         </View>
 
-    )
+)
 }
 
 const styles = StyleSheet.create({

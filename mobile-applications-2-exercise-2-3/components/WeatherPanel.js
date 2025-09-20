@@ -3,6 +3,7 @@ import {MOCK_WEATHER} from "../utils/mockWeather";
 import {getWeatherEmoji} from "../utils/weatherCodeMap";
 import PrimaryButton from "./PrimaryButton";
 import {useState} from "react";
+import {Card} from "react-native-paper"
 
 export default function WeatherPanel() {
     const [loading, setLoading] = useState(false);
@@ -21,15 +22,18 @@ export default function WeatherPanel() {
             {
                 loading ? <ActivityIndicator size="large" color='white'/> :
                     <>
-                        <View style={styles.weatherContainer}>
-                            <Text style={styles.cityText}>{MOCK_WEATHER.city}</Text>
-                            <Text style={styles.icon}>{getWeatherEmoji(MOCK_WEATHER.code)}</Text>
-                            <View style={styles.detailsContainer}>
-                                <Text style={styles.detailsText}>{MOCK_WEATHER.temperatureC} °C</Text>
-                                <Text style={styles.detailsText}>{MOCK_WEATHER.windKmh} km/h</Text>
+                        <Card style={styles.weatherContainer}>
+                            <Card.Title title={MOCK_WEATHER.city} titleStyle={styles.cityText}/>
+                            <Card.Content>
+                                <Text style={styles.icon}>{getWeatherEmoji(MOCK_WEATHER.code)}</Text>
+                                <View style={styles.detailsContainer}>
+                                    <Text style={styles.temperatureText}>{MOCK_WEATHER.temperatureC} °C</Text>
+                                    <Text style={styles.detailsText}>{MOCK_WEATHER.windKmh} km/h</Text>
 
-                            </View>
-                        </View>
+                                </View>
+                            </Card.Content>
+
+                        </Card>
 
                         <PrimaryButton
                             text='Simulate loading'
@@ -52,15 +56,15 @@ const styles = StyleSheet.create({
         gap: 20,
     },
     weatherContainer: {
-        backgroundColor: 'rgba(255,255,255,0.8)',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         padding: 40,
-        borderRadius: 20
+        borderRadius: 20,
+
     },
     cityText: {
-        fontSize: 40,
+        fontSize: 35,
         fontWeight: 'bold',
         textAlign: 'center',
     },
@@ -69,11 +73,16 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     detailsContainer: {
-        flexDirection: 'row',
-        gap: 30
+        flexDirection: 'column',
+        gap: 10
     },
     detailsText: {
-        fontSize: 25,
+        fontSize: 20,
         textAlign: 'center'
+    },
+    temperatureText: {
+        fontSize: 35,
+        textAlign: 'center',
+        fontWeight: 'bold'
     }
 });
