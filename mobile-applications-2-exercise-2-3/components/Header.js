@@ -1,16 +1,8 @@
-import {Text, StyleSheet} from 'react-native';
-import CityInput from "./CityInput";
-import {useState} from "react";
-import {Appbar, Searchbar} from 'react-native-paper';
+import {StyleSheet} from 'react-native';
+import {Appbar} from 'react-native-paper';
 
 
-export default function Heather() {
-    const [city, setCity] = useState('');
-
-    const clearInput = () => {
-        setCity('');   // clears from Heather too
-    };
-
+export default function Header() {
     return (
         <Appbar.Header
             style={styles.heatherContainer}
