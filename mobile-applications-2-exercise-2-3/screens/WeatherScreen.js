@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'stretch',
         justifyContent: 'flex-start',
-
+        gap: 20
     },
     weatherContainer: {
         flex: 3,
