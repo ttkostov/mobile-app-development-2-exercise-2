@@ -1,9 +1,46 @@
 import {StyleSheet, Text, View} from "react-native";
 import {MOCK_WEATHER} from "../utils/mockWeather";
 import {getWeatherEmoji} from "../utils/weatherCodeMap";
-import {Card} from "react-native-paper";
+import {Card, useTheme} from "react-native-paper";
 
 export default function WeatherDetails() {
+    const theme = useTheme();
+
+    const styles = StyleSheet.create({
+        weatherContainer: {
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: 40,
+            borderRadius: 20,
+        },
+        cityText: {
+            fontSize: 35,
+            fontWeight: 'bold',
+            textAlign: 'center',
+        },
+        icon: {
+            fontSize: 150,
+            textAlign: 'center',
+        },
+        detailsContainer: {
+            flexDirection: 'column',
+            gap: 10
+        },
+        detailsText: {
+            fontSize: 20,
+            textAlign: 'center',
+            color: theme.colors.onSurface
+        },
+        temperatureText: {
+            fontSize: 35,
+            textAlign: 'center',
+            fontWeight: 'bold',
+            color: theme.colors.onSurface
+        }
+    });
+
+
     return (
         <Card style={styles.weatherContainer}>
             <Card.Title title={MOCK_WEATHER.city} titleStyle={styles.cityText}/>
@@ -20,34 +57,3 @@ export default function WeatherDetails() {
     )
 }
 
-const styles = StyleSheet.create({
-    weatherContainer: {
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 40,
-        borderRadius: 20,
-    },
-    cityText: {
-        fontSize: 35,
-        fontWeight: 'bold',
-        textAlign: 'center',
-    },
-    icon: {
-        fontSize: 150,
-        textAlign: 'center',
-    },
-    detailsContainer: {
-        flexDirection: 'column',
-        gap: 10
-    },
-    detailsText: {
-        fontSize: 20,
-        textAlign: 'center'
-    },
-    temperatureText: {
-        fontSize: 35,
-        textAlign: 'center',
-        fontWeight: 'bold'
-    }
-});

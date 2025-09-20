@@ -1,9 +1,23 @@
 import {View, StyleSheet} from 'react-native';
 import PrimaryButton from "./PrimaryButton";
-import {TextInput} from 'react-native-paper'
-import {AppTheme as theme} from "../theme/AppTheme";
+import {TextInput, useTheme} from 'react-native-paper'
 
 export default function CityInput({value, onChangeText, onClear, onSubmit}) {
+    const theme = useTheme()
+    const styles = StyleSheet.create({
+        container: {
+            justifyContent: 'center',
+            flexDirection: 'row',
+            alignItems: 'center',
+            gap: 20
+        },
+        textInput: {
+            maxWidth: 200,
+            flex: 1,
+            backgroundColor: theme.colors.surface
+        },
+    })
+
     return (
         <View style={styles.container}>
             <TextInput
@@ -24,16 +38,3 @@ export default function CityInput({value, onChangeText, onClear, onSubmit}) {
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        justifyContent: 'center',
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: 20
-    },
-    textInput: {
-        maxWidth: 200,
-        flex: 1,
-        backgroundColor: theme.colors.surface
-    },
-})

@@ -3,7 +3,7 @@ import PrimaryButton from "./PrimaryButton";
 import {useState} from "react";
 import WeatherDetails from "./WeatherDetails";
 import CityInput from "./CityInput";
-import {AppTheme as theme} from "../theme/AppTheme";
+import {useTheme} from "react-native-paper";
 
 export default function WeatherPanel() {
     const [loading, setLoading] = useState(false);
@@ -21,6 +21,21 @@ export default function WeatherPanel() {
     const clearInput = () => {
         setCity('');
     };
+
+    const theme = useTheme();
+
+    const styles = StyleSheet.create({
+        panelContainer: {
+            borderRadius: 20,
+            backgroundColor: theme.colors.surface,
+            flex: 1,
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'space-evenly',
+            gap: 20,
+        },
+
+    });
 
     return (
         <View style={styles.panelContainer}>
@@ -40,15 +55,4 @@ export default function WeatherPanel() {
     );
 }
 
-const styles = StyleSheet.create({
-    panelContainer: {
-        borderRadius: 20,
-        backgroundColor: theme.colors.surface,
-        flex: 1,
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'space-evenly',
-        gap: 20,
-    },
 
-});

@@ -4,11 +4,11 @@ import WeatherPanel from '../components/WeatherPanel'
 import CustomFAB from '../components/CustomFAB';
 import {Platform} from "react-native";
 
-export default function WeatherScreen() {
+export default function WeatherScreen({toggleTheme}) {
 
     return (
         <KeyboardAvoidingView style={styles.screen} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-                <Header/>
+                <Header toggleTheme={toggleTheme} />
                 <View style={styles.weatherContainer}>
                     <WeatherPanel/>
                 </View>
