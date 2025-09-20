@@ -1,37 +1,43 @@
-import { Text, View, StyleSheet, Image, SafeAreaView, StatusBar } from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import Heather from '../components/Heather.js';
 import WeatherPanel from '../components/WeatherPanel'
+import {FAB} from 'react-native-paper';
 
 export default function WeatherScreen() {
-  return (
-    <View style={styles.screen}>
-      <View style={styles.heatherContainer}>
-        <Heather/>
-      </View>
+    return (
+        <View style={styles.screen}>
+            <Heather/>
+            <View style={styles.weatherContainer}>
+                <WeatherPanel/>
+            </View>
 
-      <View style={styles.weatherContainer}>
-        <WeatherPanel/>
-      </View>
+            <FAB
+                icon='refresh'
+                style={styles.fab}
+                mode='elevated'
+            />
 
-    </View>
+        </View>
 
-  )
-  
+    )
+
 }
 
 const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  heatherContainer: {
-    flex: 1,
-    width: '100%'
-  },
-  weatherContainer: {
-    flex: 3,
-    width: '100%'
-  },
+    screen: {
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'stretch',
+        justifyContent: 'flex-start',
+
+    },
+    weatherContainer: {
+        flex: 3,
+    },
+    fab: {
+        position: 'absolute',
+        margin: 16,
+        right: 0,
+        bottom: 0,
+    },
 });

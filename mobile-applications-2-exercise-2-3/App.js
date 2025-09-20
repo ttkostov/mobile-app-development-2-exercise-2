@@ -18,7 +18,8 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         flex: 1,
-        justifyContent: 'center',
+        alignItems: 'stretch',
+        justifyContent: 'flex-start',
         ...Platform.select({
             ios: {
                 backgroundColor: 'darkslategray',
