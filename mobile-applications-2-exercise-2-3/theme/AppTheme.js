@@ -10,7 +10,7 @@ export const LightTheme = {
             Platform.select({
                 ios: 'black',
                 android: 'darkslategray',
-                web: 'darkred',
+                web: 'saddlebrown',
                 default: 'darkblue',
             }),
         background: Platform.select({
@@ -37,7 +37,7 @@ export const DarkTheme = {
         background: Platform.select({
             ios: 'black',
             android: 'darkslategray',
-            web: 'darkred',
+            web: 'saddlebrown',
             default: 'darkblue',
         }),
     },
