@@ -23,15 +23,13 @@ const styles = StyleSheet.create({
         gap: 10,
         flex: 1,
         flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'space-around',
+        alignItems: 'stretch',
+        justifyContent: 'flex-start',
     },
     heatherContainer: {
         flex: 1,
-        width: '100%'
     },
     weatherContainer: {
         flex: 3,
-        width: '100%'
     }
 });
