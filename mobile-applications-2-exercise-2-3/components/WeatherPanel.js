@@ -31,6 +31,7 @@ export default function WeatherPanel() {
                         <WeatherDetails/>
                         <PrimaryButton
                             text='Simulate loading'
+                            icon='refresh'
                             onPress={handleLoading}/>
                     </>
 
