@@ -17,7 +17,7 @@ export default function PrimaryButton({text, icon, onPress, disabled}) {
 
 const styles = StyleSheet.create({
     button: {
-        minWidth: 100,
+        minWidth: 75,
     }
 })
 
