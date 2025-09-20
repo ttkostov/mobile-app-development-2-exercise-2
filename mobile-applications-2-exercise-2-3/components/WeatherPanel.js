@@ -26,6 +26,7 @@ export default function WeatherPanel() {
 
     const styles = StyleSheet.create({
         panelContainer: {
+            flex: 1,
             borderRadius: 20,
             backgroundColor: theme.colors.surface,
             flexDirection: 'column',
