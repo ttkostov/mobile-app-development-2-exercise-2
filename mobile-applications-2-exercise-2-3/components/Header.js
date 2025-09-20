@@ -10,6 +10,7 @@ export default function Header() {
             >
             <Appbar.Content title='Weather Now'/>
             <Appbar.Action icon='theme-light-dark'/>
+            <Appbar.Action icon='information'/>
         </Appbar.Header>
 
     )
