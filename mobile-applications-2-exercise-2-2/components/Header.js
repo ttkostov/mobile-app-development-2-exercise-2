@@ -2,7 +2,7 @@ import { Text, View, StyleSheet } from 'react-native';
 import CityInput from "./CityInput";
 import {useState} from "react";
 
-export default function Heather() {
+export default function Header() {
   const [city, setCity] = useState('');
 
   const clearInput = () => {
