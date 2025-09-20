@@ -1,22 +1,19 @@
 import {View, StyleSheet} from 'react-native';
 import Header from '../components/Header.js';
 import WeatherPanel from '../components/WeatherPanel'
+import CustomFAB from '../components/CustomFAB';
 import {FAB} from 'react-native-paper';
+import {AppTheme as theme} from "../theme/AppTheme";
 
 export default function WeatherScreen() {
+
     return (
         <View style={styles.screen}>
             <Header/>
             <View style={styles.weatherContainer}>
                 <WeatherPanel/>
             </View>
-
-            <FAB
-                icon='refresh'
-                style={styles.fab}
-                mode='elevated'
-            />
-
+            <CustomFAB/>
         </View>
 
     )
@@ -33,11 +30,5 @@ const styles = StyleSheet.create({
     },
     weatherContainer: {
         flex: 3,
-    },
-    fab: {
-        position: 'absolute',
-        margin: 16,
-        right: 0,
-        bottom: 0,
     },
 });
