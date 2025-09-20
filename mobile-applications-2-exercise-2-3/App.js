@@ -1,4 +1,4 @@
-import {Platform, StatusBar, StyleSheet, View} from 'react-native';
+import {StatusBar, StyleSheet} from 'react-native';
 import WeatherScreen from './screens/WeatherScreen';
 import { SafeAreaView} from "react-native-safe-area-context";
 import {Provider as PaperProvider, MD3LightTheme} from 'react-native-paper';
