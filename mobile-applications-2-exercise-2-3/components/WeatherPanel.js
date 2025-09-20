@@ -1,9 +1,6 @@
-import {Text, View, StyleSheet, Button, ActivityIndicator} from 'react-native';
-import {MOCK_WEATHER} from "../utils/mockWeather";
-import {getWeatherEmoji} from "../utils/weatherCodeMap";
+import {View, StyleSheet, ActivityIndicator} from 'react-native';
 import PrimaryButton from "./PrimaryButton";
 import {useState} from "react";
-import {Card} from "react-native-paper"
 import WeatherDetails from "./WeatherDetails";
 
 export default function WeatherPanel() {
