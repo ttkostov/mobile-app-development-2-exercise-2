@@ -6,6 +6,7 @@ export default function CityInput({value, onChangeText, onClear, onSubmit}) {
     const theme = useTheme()
     const styles = StyleSheet.create({
         container: {
+            flexWrap: 'wrap',
             justifyContent: 'center',
             flexDirection: 'row',
             alignItems: 'center',

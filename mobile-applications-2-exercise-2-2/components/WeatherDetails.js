@@ -21,11 +21,11 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 20,
+        padding: 10,
         borderRadius: 20
     },
     cityText: {
-        fontSize: 40,
+        fontSize: 35,
         fontWeight: 'bold',
         textAlign: 'center',
     },

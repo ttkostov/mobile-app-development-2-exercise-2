@@ -22,6 +22,7 @@ export default function CityInput({value, onChangeText, onClear, onSubmit}) {
 
 const styles = StyleSheet.create({
     container: {
+        flexWrap: 'wrap',
         justifyContent: 'center',
         flexDirection: 'row',
         alignItems: 'center',
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
     textInput: {
         borderRadius: 20,
         borderWidth: 1,
-        width: 250,
+        maxWidth: 200,
         padding: 10,
     }
 })

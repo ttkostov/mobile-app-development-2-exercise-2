@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'space-evenly',
-        gap: 20,
+        gap: 10,
         padding: 10,
     }
 });
