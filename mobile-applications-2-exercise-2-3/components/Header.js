@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {Appbar, useTheme} from 'react-native-paper';
+import {Appbar} from 'react-native-paper';
 
 
 export default function Header({toggleTheme}) {
@@ -23,5 +23,4 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 30
     }
-
 });
