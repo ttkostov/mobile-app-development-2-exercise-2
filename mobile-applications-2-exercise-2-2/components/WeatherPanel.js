@@ -42,10 +42,10 @@ const styles = StyleSheet.create({
     panelContainer: {
         borderRadius: 20,
         backgroundColor: 'rgba(255,255,255,0.8)',
-        flex: 1,
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'space-evenly',
         gap: 20,
+        padding: 10,
     }
 });

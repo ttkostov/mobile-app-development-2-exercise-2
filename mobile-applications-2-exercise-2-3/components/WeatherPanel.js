@@ -28,11 +28,11 @@ export default function WeatherPanel() {
         panelContainer: {
             borderRadius: 20,
             backgroundColor: theme.colors.surface,
-            flex: 1,
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'space-evenly',
             gap: 20,
+            padding: 10
         },
 
     });
