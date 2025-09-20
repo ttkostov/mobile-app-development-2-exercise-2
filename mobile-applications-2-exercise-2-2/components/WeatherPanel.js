@@ -18,13 +18,13 @@ export default function WeatherPanel() {
     const [city, setCity] = useState('');
 
     const clearInput = () => {
-        setCity('');   // clears from Heather too
+        setCity('');
     };
 
     return (
         <View style={styles.panelContainer}>
             {
-                loading ? <ActivityIndicator size="large" color='white'/> :
+                loading ? <ActivityIndicator size="large" color='black'/> :
                     <>
                         <CityInput value={city} onChangeText={setCity} onClear={clearInput}/>
                         <WeatherDetails/>
