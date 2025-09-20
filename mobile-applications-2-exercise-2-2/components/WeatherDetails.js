@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 40,
+        padding: 20,
         borderRadius: 20
     },
     cityText: {
