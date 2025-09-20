@@ -1,6 +1,5 @@
 import { Text, View, StyleSheet } from 'react-native';
-import CityInput from "./CityInput";
-import {useState} from "react";
+
 
 export default function Header() {
   return (
