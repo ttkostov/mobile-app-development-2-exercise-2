@@ -1,6 +1,7 @@
 import {View, StyleSheet} from 'react-native';
 import PrimaryButton from "./PrimaryButton";
 import {TextInput} from 'react-native-paper'
+import {AppTheme as theme} from "../theme/AppTheme";
 
 export default function CityInput({value, onChangeText, onClear, onSubmit}) {
     return (
@@ -32,5 +33,6 @@ const styles = StyleSheet.create({
     },
     textInput: {
         width: 250,
+        backgroundColor: theme.colors.surface
     },
 })

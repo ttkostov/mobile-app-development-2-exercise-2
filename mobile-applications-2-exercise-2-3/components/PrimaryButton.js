@@ -9,12 +9,6 @@ export default function PrimaryButton({text, onPress, disabled}) {
                 onPress={onPress}
                 disabled={disabled}
                 icon='refresh'
-                buttonColor={Platform.select({
-                    ios: 'black',
-                    android: 'darkslategray',
-                    web: 'darkred',
-                    default: 'darkblue',
-                })}
             >{text}</Button>
         </View>
 

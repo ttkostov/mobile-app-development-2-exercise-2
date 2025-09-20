@@ -3,6 +3,7 @@ import PrimaryButton from "./PrimaryButton";
 import {useState} from "react";
 import WeatherDetails from "./WeatherDetails";
 import CityInput from "./CityInput";
+import {AppTheme as theme} from "../theme/AppTheme";
 
 export default function WeatherPanel() {
     const [loading, setLoading] = useState(false);
@@ -41,7 +42,7 @@ export default function WeatherPanel() {
 const styles = StyleSheet.create({
     panelContainer: {
         borderRadius: 20,
-        backgroundColor: 'rgba(255,255,255,0.8)',
+        backgroundColor: theme.colors.surface,
         flex: 1,
         flexDirection: 'column',
         alignItems: 'center',
