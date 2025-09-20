@@ -1,4 +1,4 @@
-import {View, StyleSheet, TextInput, Button} from 'react-native';
+import {View, StyleSheet, TextInput} from 'react-native';
 import PrimaryButton from "./PrimaryButton";
 
 export default function CityInput({value, onChangeText, onClear, onSubmit}) {
