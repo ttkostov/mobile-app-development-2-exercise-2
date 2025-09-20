@@ -1,4 +1,4 @@
-import {Text, View, StyleSheet, Button, ActivityIndicator} from 'react-native';
+import {Text, View, StyleSheet, ActivityIndicator} from 'react-native';
 import {MOCK_WEATHER} from "../utils/mockWeather";
 import {getWeatherEmoji} from "../utils/weatherCodeMap";
 import PrimaryButton from "./PrimaryButton";

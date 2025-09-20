@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Image, SafeAreaView, StatusBar } from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import Heather from '../components/Heather.js';
 import WeatherPanel from '../components/WeatherPanel'
 
