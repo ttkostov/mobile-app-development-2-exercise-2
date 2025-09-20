@@ -1,4 +1,4 @@
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, KeyboardAvoidingView} from 'react-native';
 import Header from '../components/Header.js';
 import WeatherPanel from '../components/WeatherPanel'
 import CustomFAB from '../components/CustomFAB';
@@ -6,13 +6,14 @@ import CustomFAB from '../components/CustomFAB';
 export default function WeatherScreen() {
 
     return (
-        <View style={styles.screen}>
-            <Header/>
-            <View style={styles.weatherContainer}>
-                <WeatherPanel/>
-            </View>
-            <CustomFAB/>
-        </View>
+        <KeyboardAvoidingView style={styles.screen}>
+                <Header/>
+                <View style={styles.weatherContainer}>
+                    <WeatherPanel/>
+                </View>
+                <CustomFAB/>
+        </KeyboardAvoidingView>
+
 
     )
 

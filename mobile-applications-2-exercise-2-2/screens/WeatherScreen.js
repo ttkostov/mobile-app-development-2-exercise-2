@@ -1,10 +1,10 @@
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, KeyboardAvoidingView} from 'react-native';
 import Header from '../components/Header.js';
 import WeatherPanel from '../components/WeatherPanel'
 
 export default function WeatherScreen() {
     return (
-        <View style={styles.screen}>
+        <KeyboardAvoidingView style={styles.screen}>
             <View style={styles.heatherContainer}>
                 <Header/>
             </View>
@@ -12,8 +12,7 @@ export default function WeatherScreen() {
             <View style={styles.weatherContainer}>
                 <WeatherPanel/>
             </View>
-
-        </View>
+        </KeyboardAvoidingView>
 
     )
 
