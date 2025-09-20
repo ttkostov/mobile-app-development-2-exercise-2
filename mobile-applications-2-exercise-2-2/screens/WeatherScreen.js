@@ -23,16 +23,14 @@ const styles = StyleSheet.create({
     screen: {
         flex: 1,
         flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: 'stretch',
+        justifyContent: 'flex-start',
         gap: 20
     },
     heatherContainer: {
         flex: 1,
-        width: '100%'
     },
     weatherContainer: {
         flex: 3,
-        width: '100%'
     },
 });
