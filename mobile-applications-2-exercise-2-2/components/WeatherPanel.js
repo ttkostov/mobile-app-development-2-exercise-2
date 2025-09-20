@@ -34,10 +34,8 @@ export default function WeatherPanel() {
                     </>
 
             }
-
         </View>
-    )
-        ;
+    );
 }
 
 const styles = StyleSheet.create({
