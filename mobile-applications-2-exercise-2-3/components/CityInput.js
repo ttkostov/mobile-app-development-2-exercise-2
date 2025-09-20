@@ -7,7 +7,7 @@ export default function CityInput({value, onChangeText, onClear, onSubmit}) {
     return (
         <View style={styles.container}>
             <TextInput
-                mode="outlined"
+                mode="flat"
                 style={styles.textInput}
                 label='City'
                 placeholder='Helsinki'
@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
         gap: 20
     },
     textInput: {
-        width: 250,
+        maxWidth: 200,
+        flex: 1,
         backgroundColor: theme.colors.surface
     },
 })
