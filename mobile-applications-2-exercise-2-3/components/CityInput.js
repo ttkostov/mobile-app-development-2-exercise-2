@@ -1,12 +1,15 @@
-import {View, StyleSheet, TextInput, Button} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import PrimaryButton from "./PrimaryButton";
+import {TextInput} from 'react-native-paper'
 
 export default function CityInput({value, onChangeText, onClear, onSubmit}) {
     return (
         <View style={styles.container}>
             <TextInput
+                mode="outlined"
                 style={styles.textInput}
-                placeholder='Enter a city'
+                label='City'
+                placeholder='Helsinki'
                 onChangeText={onChangeText}
                 onSubmitEditing={onSubmit}
                 value={value}
@@ -28,10 +31,6 @@ const styles = StyleSheet.create({
         gap: 20
     },
     textInput: {
-        borderWidth: 1,
         width: 250,
-        padding: 10,
     },
-    button: {
-    }
 })
