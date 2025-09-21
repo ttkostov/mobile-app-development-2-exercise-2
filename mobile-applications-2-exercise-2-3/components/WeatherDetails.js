@@ -15,7 +15,7 @@ export default function WeatherDetails() {
             borderRadius: 20,
         },
         cityText: {
-            fontSize: 35,
+            fontSize: 25,
             fontWeight: 'bold',
             textAlign: 'center',
         },
