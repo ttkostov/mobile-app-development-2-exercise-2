@@ -8,34 +8,36 @@ export const LightTheme = {
         ...MD3LightTheme.colors,
         primary:
             Platform.select({
-                ios: 'black',
+                ios: 'sienna',
                 android: 'darkslategray',
                 web: 'saddlebrown',
                 default: 'darkblue',
             }),
         background: Platform.select({
-            ios: 'darkslategray',
+            ios: 'navajowhite',
             android: 'darkseagreen',
-            web:  'chocolate',
-            default:  'darkslateblue',
+            web: 'chocolate',
+            default: 'darkslateblue',
         }),
     },
 };
 
 export const DarkTheme = {
-    ...MD3LightTheme,
+    ...MD3DarkTheme,
     myOwnProperty: true,
     colors: {
         ...MD3DarkTheme.colors,
         primary:
             Platform.select({
-                ios: 'darkslategray',
+                ios: 'peru',
                 android: 'darkseagreen',
-                web:  'chocolate',
-                default:  'darkslateblue',
+                web: 'chocolate',
+                default: 'darkslateblue',
             }),
+        onPrimary:
+            'white',
         background: Platform.select({
-            ios: 'black',
+            ios: 'sienna',
             android: 'darkslategray',
             web: 'saddlebrown',
             default: 'darkblue',
