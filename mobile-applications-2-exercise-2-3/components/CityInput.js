@@ -1,28 +1,41 @@
-import {Dialog, Portal, useTheme} from "react-native-paper";
+import {View, StyleSheet} from 'react-native';
 import PrimaryButton from "./PrimaryButton";
-import {Text, StyleSheet} from "react-native";
+import {TextInput, useTheme} from 'react-native-paper'
 
-export default function AboutDialog({visible, onDismiss}) {
+export default function CityInput({value, onChangeText, onClear, onSubmit}) {
     const theme = useTheme()
     const styles = StyleSheet.create({
-        text: {
-            color: theme.colors.onSurface
+        container: {
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            flexDirection: 'row',
+            alignItems: 'center',
+            gap: 20
+        },
+        textInput: {
+            maxWidth: 200,
+            flex: 1,
+            backgroundColor: theme.colors.surface
         },
     })
 
     return (
-        <Portal>
-            <Dialog visible={visible} onDismiss={onDismiss}>
-                <Dialog.Title>About the App</Dialog.Title>
-                <Dialog.Content>
-                    <Text style={styles.text}>This is a weather app created for the course Mobile App Development 2 at
-                        TAMK</Text>
-                </Dialog.Content>
-                <Dialog.Actions>
-                    <PrimaryButton text='Done' onPress={onDismiss}/>
-                </Dialog.Actions>
-            </Dialog>
-        </Portal>
-    );
-};
+        <View style={styles.container}>
+            <TextInput
+                mode="flat"
+                style={styles.textInput}
+                label='City'
+                placeholder='Helsinki'
+                onChangeText={onChangeText}
+                onSubmitEditing={onSubmit}
+                value={value}
+            />
+            <PrimaryButton
+                text='Clear'
+                onPress={onClear}
+            />
+        </View>
+
+    )
+}
 
